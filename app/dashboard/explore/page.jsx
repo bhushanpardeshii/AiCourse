@@ -21,7 +21,7 @@ const Explore = () => {
             <div className='grid grid-cols-2 lg:grid-cols-3 gap-5'>
                 {courseList?.map((course, index) => {
                     return (
-                        <CourseCard course={course} displayUser={true} />
+                        <CourseCard key={index} course={course} displayUser={true} />
                     )
                 })}
             </div>
