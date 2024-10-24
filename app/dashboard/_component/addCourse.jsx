@@ -13,10 +13,10 @@ const AddCourse = () => {
             <div>
                 <h2 className='text-2xl text-gray-300'>Hello, <span className='font-bold text-red-500'>
                     {user?.firstName} </span></h2>
-                <p className='text-sm text-gray-300'>Create new courses with AI,Share with friends and Earn money</p>
+                <p className='text-sm pt-2 text-gray-300'>Empower Your Learning Journey: Create and Customize Courses on Any Topic with AI Assistance</p>
             </div>
             <div>
-                <Link href={userCourseList >= 3 ? '/dashboard/upgrade' : '/createCourse'}>
+                <Link href={userCourseList >= 2 ? '/dashboard/upgrade' : '/createCourse'}>
                     <Button className='bg-red-600 hover:bg-[#ff0000] text-md'>+ Create AI Course</Button>
                 </Link>
             </div>
