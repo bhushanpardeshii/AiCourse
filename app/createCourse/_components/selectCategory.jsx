@@ -14,7 +14,7 @@ const SelectCategory = () => {
     return (
         <div className='px-10 md:px-20'>
             <h2 className='text-gray-300 my-5'>Select Category</h2>
-            <div className='grid grid-cols-3 gap-10 '>
+            <div className='grid grid-cols-1 md:grid-cols-3 gap-10 '>
                 {categoryList.map((item, index) => {
                     return (
                         <div key={index} className={`flex flex-col p-5 border border-purple-600 items-center rounded-xl hover:bg-purple-600 cursor-pointer ${userCourseInput?.category == item.name && 'bg-purple-600'}`} onClick={() => handleCategoryChange(item.name)}>

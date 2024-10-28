@@ -9,7 +9,7 @@ const DashboardLayout = ({ children }) => {
     return (
         <UserCourseListContext.Provider value={{ userCourseList, setUserCourseList }}>
 
-            <div className='h-screen bg-gray-900'>
+            <div className='min-h-screen bg-gray-900'>
                 <div className='md:w-64 hidden md:block'>
                     <Sidebar />
                 </div>

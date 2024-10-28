@@ -9,7 +9,12 @@ const Header = () => {
             <Image src={'/finallogo.png'} width={190} height={190} />
             <div className='flex  items-center'>
 
-                <Button className='bg-red-600 hover:bg-[#FF2400] '>Get Started</Button>
+                <a
+                    className="block w-full rounded border border-red-600 bg-red-600 px-12 py-3 text-sm font-medium text-white hover:bg-transparent hover:text-white focus:outline-none focus:ring active:text-opacity-75 sm:w-auto"
+                    href="/dashboard"
+                >
+                    Get Started
+                </a>
             </div>
         </div>
     )

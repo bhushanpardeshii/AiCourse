@@ -5,7 +5,7 @@ import { HiOutlineBookOpen } from 'react-icons/hi2'
 const CourseCard = ({ course, displayUser = false }) => {
     return (
         <div className='shadow-md shadow-red-800 rounded-lg border p-2 border-red-500
-        hover:scale-105 transition-all cursor-pointer mt-2'>
+        hover:scale-105 transition-all  cursor-pointer mt-2'>
             <Link href={'/course/' + course?.courseId}>
                 <Image src={course?.courseBanner} width={300} height={200} className='w-full object-cover h-[200px] rounded-lg' />
             </Link>
