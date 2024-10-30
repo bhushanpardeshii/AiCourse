@@ -2,11 +2,11 @@
 import CourseBasicInfo from '@/app/createCourse/[courseId]/_components/CourseBasicInfo'
 import CourseDetail from '@/app/createCourse/[courseId]/_components/CourseDetail'
 import ChapterList from '@/app/createCourse/_components/chapterList'
-import Header from '@/components/ui/Header'
 import { db } from '@/configs/db'
 import { CourseList } from '@/configs/schema'
 import { eq } from 'drizzle-orm'
 import React, { useEffect, useState } from 'react'
+import Header from '../../dashboard/_component/header'
 
 const Course = ({ params }) => {
     const [course, setCourse] = useState();
