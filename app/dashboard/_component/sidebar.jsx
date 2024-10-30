@@ -7,6 +7,7 @@ import { HiOutlineHome, HiOutlinePower, HiOutlineRocketLaunch, HiOutlineSwatch }
 import { Progress } from "@/components/ui/progress"
 import { UserCourseListContext } from '@/app/_context/UserCourseListContext';
 import UserCourseList from './userCourseList';
+import { SignOutButton } from '@clerk/nextjs';
 
 
 const Sidebar = () => {
@@ -31,12 +32,7 @@ const Sidebar = () => {
             icon: <HiOutlineRocketLaunch />,
             path: '/dashboard/upgrade'
         },
-        {
-            id: 1,
-            name: 'LogOut',
-            icon: <HiOutlinePower />,
-            path: '/dashboard/logout'
-        },
+
 
     ]
     return (
@@ -57,6 +53,12 @@ const Sidebar = () => {
                         </Link>
                     )
                 })}
+                <SignOutButton>
+                    <div className='text-xl text-gray-200 flex gap-3 items-center m-2 p-3 hover:text-red-500 hover:cursor-pointer hover:rounded-lg hover:bg-gray-900  rounded-lg'>
+                        <HiOutlinePower className='text-red-600 text-2xl' />
+                        Logout
+                    </div>
+                </SignOutButton>
             </ul>
             <div className='absolute bottom-10 w-[80%] '>
                 <Progress value={(userCourseList?.length / 2) * 100} />

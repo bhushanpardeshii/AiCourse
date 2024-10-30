@@ -44,7 +44,7 @@ const CourseBasicInfo = ({ course, edit = true }) => {
                 <div className='flex flex-col justify-between'>
                     <div>
 
-                        <h2 className='font-bold text-3xl text-gray-300'>{course?.courseOutput?.["Course Name"] || "Please wait.."}</h2>
+                        <h2 className='font-bold text-3xl text-gray-300'>{course?.courseOutput?.["Course Name"] || course?.courseOutput?.CourseName || "Please wait.."}</h2>
                         <p className='text-sm mt-3 '>
                             {course?.courseOutput?.Description}
                         </p>

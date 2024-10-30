@@ -1,8 +1,8 @@
 "use client"
-import { db } from '@/configs/db'
-import { Chapters, CourseList } from '@/configs/schema'
-import { and, eq } from 'drizzle-orm'
 import React, { useEffect, useState } from 'react'
+import { Chapters, CourseList } from '@/configs/schema'
+import { db } from '@/configs/db'
+import { and, eq } from 'drizzle-orm'
 import ChapterListCard from './_components/chapterListCard'
 import ChapterContent from './_components/chapterContent'
 
@@ -27,8 +27,10 @@ const CourseStart = ({ params }) => {
     }
     return (
         <div>
+
             <div className='fixed md:w-64 hidden md:block h-screen bg-gray-700 '>
-                <h2 className='text-gray-300 font-medium text-lg bg-gray-900 text-center p-3'>{course?.courseOutput?.['Course Name']}</h2>
+
+                <h2 className='text-gray-300 font-medium text-lg bg-gray-900 text-center p-3'>{course?.courseOutput?.['Course Name'] || course?.courseOutput?.CourseName}</h2>
                 <div>
                     {course?.courseOutput?.Chapters.map((chapter, index) => {
                         return (

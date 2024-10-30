@@ -10,11 +10,11 @@ const CourseCard = ({ course, displayUser = false }) => {
                 <Image src={course?.courseBanner} width={300} height={200} className='w-full object-cover h-[200px] rounded-lg' />
             </Link>
             <div className='p-2'>
-                <h2 className='font-medium text-lg'>{course?.courseOutput?.['Course Name']}</h2>
+                <h2 className='font-medium text-lg'>{course?.courseOutput?.['Course Name'] || course?.courseOutput?.CourseName}</h2>
                 <p className='text-gray-400 text-sm my-1'>{course?.category}</p>
                 <div className='flex items-center justify-between p-1'>
-                    <h2 className='flex gap-2 items-center p-1 text-red-600 '><HiOutlineBookOpen />{course?.courseOutput?.["No of Chapters"]} Chapters</h2>
-                    <h2 className='p-1 bg-red-600 text-sm rounded-lg text-red-200 '>{course?.courseOutput?.Level} </h2>
+                    <h2 className='flex gap-2 items-center p-1 text-red-600 '><HiOutlineBookOpen />{course?.courseOutput?.["No of Chapters"] || course?.courseOutput?.NoOfChapters} Chapters</h2>
+                    <h2 className='p-1 border border-red-600 text-sm rounded-md text-red-200 '>{course?.courseOutput?.Level} </h2>
                 </div>
                 {displayUser && <div className='flex gap-2 items-center'>
                     <Image src={course?.userProfileImage} width={30} height={30} className='rounded-full' />

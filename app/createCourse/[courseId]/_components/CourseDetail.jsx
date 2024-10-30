@@ -23,7 +23,7 @@ const CourseDetail = ({ course }) => {
                     <HiOutlineBookOpen className='text-4xl text-red-700' />
                     <div>
                         <h2 className='text-xs'>No Of Chapters</h2>
-                        <h2 className='font-medium text-lg'>{course?.courseOutput?.["No of Chapters"]}</h2>
+                        <h2 className='font-medium text-lg'>{course?.courseOutput?.["No of Chapters"] || course?.courseOutput?.NoOfChapters}</h2>
                     </div>
                 </div>
                 <div className='flex gap-2'>
